@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Which Movie Poster do you like</h1>
+    <script>
+        function poster(L){
+            var pic;
+            if(L == 0){
+                pic = "Totoro1.png"
+            } else{
+                pic = "Totoro2.png"
+            }
+            document.getElementById("poster").src = pic;
+         //   document.getElementById("imgwrapper").style.backgroundColor = "Red";
+        }
+    </script>
+    <div id="imgwrapper" width="920" height="1378">
+    <img id="poster" src="../JS_Files/Totoro1.png" width="910" height="1368">
+</div>
+    <p>
+        <button type="button" onclick="poster(1)">Choice 1</button>
+        <button type="button" onclick="poster(0)">Choice 2</button>
+    </p>
+</body>
+</html>
