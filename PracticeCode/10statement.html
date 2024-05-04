@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Statements</h2>
+    <p>A <b>JavaScript program</b> is a list of <b>statements</b> to be executed by a computer </p>
+    <p id="demo"></p>
+    <script>
+        let x, y, z;   //statement 1
+        x = 5;        //statement 2
+        y = 6;       //statement 3
+        z = x + y;  //statement  4
+
+        document.getElementById('demo').innerHTML =
+        "The value of z is "+  z + ".";
+    </script>
+    <hr>
+    <p> JavaScript statement are seperated by semicolons.</p>
+    <p>Ending statements with semicolon is not required, but highly recommended.</p>
+    <p id="new"></p>
+    <script>
+        let  a, b, c; 
+        a = 5;
+        b = 8;
+        c = a + b;
+        document.getElementById('new').innerHTML = c ;
+    </script>
+    <hr>
+    <p> Multiple statements on one line are allowed e.g. a = 5; b = 6; c = a + b;</p>
+    <p id="demo1"></p>
+    <script>
+        let l, m, o;
+        a = 5; b = 3; c = a + b;
+        document.getElementById('demo1').innerHTML = c;
+    </script>
+</body>
+</html>
