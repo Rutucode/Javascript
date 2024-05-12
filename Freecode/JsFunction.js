@@ -97,4 +97,90 @@ function processArg(num) {
 // Only change code below this line
 processed = processArg(7);
 //-------------------------------------------------------------------------------------
+/*Write a function nextInLine which takes an array (arr) and a number (item) as arguments.
+
+Add the number to the end of the array, then remove the first element of the array.
+
+The nextInLine function should then return the element that was removed. */
+
+function nextInLine(arr, item) {
+  // Only change code below this line
+arr.push(item);
+var removedItem = arr.shift();
+
+  return removedItem;
+  // Only change code above this line
+}
+
+// Setup
+let testArr = [1, 2, 3, 4, 5];
+
+// Display code
+console.log("Before: " + JSON.stringify(testArr));
+console.log(nextInLine(testArr, 6));
+console.log("After: " + JSON.stringify(testArr));
+ 
+ 
+//-------------------------------------------------------------------------------------
+// PB: Modify the welcomeToBooleans function so that it returns true instead of false.
+function welcomeToBooleans() {
+  // Only change code below this line
+
+  return true; // Change this line
+
+  // Only change code above this line
+}
+//-------------------------------------------------------------------------------------
+
+// PB: Create an if statement inside the function to return Yes, that was true if the parameter wasThatTrue is true and return No, that was false otherwise.
+function trueOrFalse(wasThatTrue) {
+  // Only change code below this line
+if (wasThatTrue) {
+  return "Yes, that was true";
+}
+return "No, that was false";
+}
+
+
+  // Only change code above this line
+
+//-------------------------------------------------------------------------------------
+
+//PB:  Add the equality operator to the indicated line so that the function will return the string Equal when val is equivalent to 12.
+// Setup
+function testEqual(val) {
+  if (val == 12) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testEqual(10);
+
+//-------------------------------------------------------------------------------------
+//PB: Use the strict equality operator in the if statement so the function will return the string Equal when val is strictly equal to 7.
+// Setup
+function testStrict(val) {
+  if (val === 7) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+testStrict(10);
+//-------------------------------------------------------------------------------------
+//The compareEquality function in the editor compares two values using the equality operator. Modify the function so that it returns the string Equal only when the values are strictly equal.
+// Setup
+function compareEquality(a, b) {
+  if (a === b) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+compareEquality(10, "10");
+//-------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------
+
 //-------------------------------------------------------------------------------------
