@@ -248,7 +248,367 @@ function testLessThan(val) {
 
 testLessThan(10);
 //-------------------------------------------------------------------------------------
+//Add the less than or equal to operator to the indicated lines so that the return statements make sense.
+function testLessOrEqual(val) {
+  if (val <= 12) {  // Change this line
+    return "Smaller Than or Equal to 12";
+  }
+
+  if (val <= 24) {  // Change this line
+    return "Smaller Than or Equal to 24";
+  }
+
+  return "More Than 24";
+}
+
+testLessOrEqual(10);
+
 //-------------------------------------------------------------------------------------
+// Replace the two if statements with one statement, using the && operator, which will return the string Yes if val is less than or equal to 50 and greater than or equal to 25. Otherwise, will return the string No.
+function testLogicalAnd(val) {
+  // Only change code below this line
+
+  if (val <= 50 && val >= 25) {
+    
+      return "Yes";
+    
+  }
+
+  // Only change code above this line
+  return "No";
+}
+
+testLogicalAnd(10);
+//-------------------------------------------------------------------------------------
+//Combine the two if statements into one statement which returns the string Outside if val is not between 10 and 20, inclusive. Otherwise, return the string Inside.
+function testLogicalOr(val) {
+  // Only change code below this line
+
+  if (val < 10 || val > 20) {
+    return "Outside";
+  }
+
+
+  // Only change code above this line
+  return "Inside";
+}
+
+testLogicalOr(15);
+//-------------------------------------------------------------------------------------
+//Combine the if statements into a single if/else statement.
+/*function testElse(val) {
+  let result = "";
+  // Only change code below this line
+
+  if (val > 5) {
+    result = "Bigger than 5";
+  }
+
+  if (val <= 5) {
+    result = "5 or Smaller";
+  }
+
+  // Only change code above this line
+  return result;
+}
+
+testElse(4); */
+function testElse(val) {
+  let result = "";
+  // Only change code below this line
+
+  if (val > 5) {
+    result = "Bigger than 5";
+  }
+
+  else {
+    result = "5 or Smaller";
+  }
+
+  // Only change code above this line
+  return result;
+}
+
+testElse(4);
+//-------------------------------------------------------------------------------------
+//Convert the logic to use else if statements.
+/*function testElseIf(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  }
+
+  if (val < 5) {
+    return "Smaller than 5";
+  }
+
+  return "Between 5 and 10";
+}
+
+testElseIf(7); */
+function testElseIf(val) {
+  if (val > 10) {
+    return "Greater than 10";
+  }
+
+  else if (val < 5) {
+    return "Smaller than 5";
+  } else {
+
+  return "Between 5 and 10";
+ }
+}
+
+testElseIf(7);
+//-------------------------------------------------------------------------------------
+//Change the order of logic in the function so that it will return the correct statements in all cases.
+/*function orderMyLogic(val) {
+  if (val < 10) {
+    return "Less than 10";
+  } else if (val < 5) {
+    return "Less than 5";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+
+orderMyLogic(7); */
+function orderMyLogic(val) {
+  if (val < 5) {
+    return "Less than 5";
+  } else if (val < 10) {
+    return "Less than 10";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+
+orderMyLogic(7);
+//-------------------------------------------------------------------------------------
+/*Write chained if/else if statements to fulfill the following conditions:
+
+num < 5 - return Tiny
+num < 10 - return Small
+num < 15 - return Medium
+num < 20 - return Large
+num >= 20 - return Huge
+
+ */
+function testSize(num) {
+  // Only change code below this line
+if (num < 5) {
+return "Tiny";
+}
+else if (num < 10) {
+return "Small";
+}
+else if (num < 15) {
+return "Medium";
+}
+ else if (num < 20) {
+return "Large";
+}
+else if (num >= 20) {
+return "Huge";
+}
+  return "Change Me";
+  // Only change code above this line
+}
+
+testSize(7);
+//-------------------------------------------------------------------------------------
+/*In the game of Golf, each hole has a par, meaning, the average number of strokes a golfer is expected to make in order to sink the ball in the hole to complete the play. Depending on how far above or below par your strokes are, there is a different nickname.
+
+Your function will be passed par and strokes arguments. Return the correct string according to this table which lists the strokes in order of priority; top (highest) to bottom (lowest):
+
+Strokes	Return
+1	"Hole-in-one!"
+<= par - 2	"Eagle"
+par - 1	"Birdie"
+par	"Par"
+par + 1	"Bogey"
+par + 2	"Double Bogey"
+>= par + 3	"Go Home!"
+par and strokes will always be numeric and positive. We have added an array of all the names for your convenience.
+
+ */
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+  // Only change code below this line
+   if (strokes === 1){
+  return "Hole-in-one!";
+}
+else if (strokes <= par-2){
+  return "Eagle";
+}
+else if (strokes == par-1){
+  return "Birdie";
+}
+else if (strokes === par){
+  return "Par";
+}
+else if (strokes === par + 1){
+  return "Bogey";
+}
+else if (strokes === par + 2){
+  return "Double Bogey";
+} 
+  else {
+  return "Go Home!";
+}
+  return "Change Me";
+  // Only change code above this line
+}
+
+golfScore(5, 4);
+
+/*----- sol 2 */
+function golfScore(par, strokes) {
+  // Only change code below this line
+
+  if (strokes === 1) return "Hole-in-one!";
+
+  else if ((strokes - par) <= -2) return 'Eagle';
+
+  else if ((strokes - par) === -1) return 'Birdie';
+
+  else if (strokes === par) return 'Par';
+
+  else if ((strokes - par) === 1) return 'Bogey';
+
+  else if ((strokes - par) === 2) return 'Double Bogey';
+
+  else return 'Go Home!';
+  // Only change code above this line
+  //------ if we write else if   instead of else soln is accepeted
+  /*
+  else if (strokes >= par + 3) {
+  return "Go Home!";
+}*/
+  /* EXPLAINATION
+  In JavaScript, the else statement does not take a condition like else (strokes >= par + 3). It should be just else without any condition. The else statement is executed if none of the preceding if or else if conditions are true. */
+}
+
+// Change these values to test
+golfScore(5, 1);
+/*----- sol 3 */
+//const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+  // Only change code below this line
+  if (strokes == 1) {
+    return names[0];
+  } else if (strokes <= par - 2) {
+    return names[1];
+  } else if (strokes === par - 1) {
+    return names[2];
+  } else if (strokes === par) {
+    return names[3];
+  } else if (strokes === par + 1) {
+    return names[4];
+  } else if (strokes === par + 2) {
+    return names[5];
+  } else {
+    return names[6];
+  }
+  // Only change code above this line
+}
+
+// Change these values to test
+golfScore(5, 4);
+//-------------------------------------------------------------------------------------
+/*Write a switch statement which tests val and sets answer for the following conditions:
+1 - alpha
+2 - beta
+3 - gamma
+4 - delta*/
+function caseInSwitch(val) {
+  let answer = "";
+  // Only change code below this line
+  switch(val){
+case 1 :   
+answer = "alpha";
+break;
+
+case 2 :   
+answer = "beta";
+break;
+case 3 :   
+answer = "gamma";
+break;
+case 4 :   
+answer = "delta";
+break;
+}
+
+  // Only change code above this line
+  return answer;
+}
+
+caseInSwitch(1);
+//-------------------------------------------------------------------------------------
+/*Write a switch statement to set answer for the following conditions:
+a - apple
+b - bird
+c - cat
+default - stuff
+*/
+function switchOfStuff(val) {
+  let answer = "";
+  // Only change code below this line
+switch (val){
+  case "a":
+  answer = "apple";
+  break;
+  case "b":
+  answer = "bird";
+  break;
+  case "c": 
+  answer = "cat";
+  break;
+  
+  default: 
+  answer = "stuff";
+  break;
+}
+
+
+  // Only change code above this line
+  return answer;
+}
+
+switchOfStuff(1);
+//-------------------------------------------------------------------------------------
+/*Write a switch statement to set answer for the following ranges:
+1-3 - Low
+4-6 - Mid
+7-9 - High */
+function sequentialSizes(val) {
+  let answer = "";
+  // Only change code below this line
+switch(val){
+  case 1 :
+  case 2:
+  case 3:
+  answer = "Low";
+  break;
+  case 4:
+  case 5:
+  case 6:
+  answer = "Mid";
+  break;
+  case 7:
+  case 8:
+  case 9:
+  answer = "High"
+}
+
+
+  // Only change code above this line
+  return answer;
+}
+
+sequentialSizes(1);
 //-------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------
