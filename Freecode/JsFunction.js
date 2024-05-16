@@ -686,7 +686,7 @@ function isLess(a, b) {
 
 isLess(10, 15);
 //-------------------------------------------------------------------------------------
-/*Modify the function abTest so that if a or b are less than 0 the function will immediately exit with a value of undefined.
+/*Modify the function abTest so that if a or b are less tha n 0 the function will immediately exit with a value of undefined.
 
 Hint
 Remember that undefined is a keyword, not a string. */
@@ -762,6 +762,44 @@ function cc(card) {
 // Add/remove calls to test your function.
 // Note: Only the last will display
 cc(2); cc(3); cc(7); cc('K'); cc('A');
+/*sol 2------------------------------------ */
+/*let count = 0;
+
+function cc(card) {
+  // Only change code below this line
+switch (card){
+  case 2 :
+  case 3:
+  case 4:
+  case 5:
+  case 6:
+  count++;
+  break;
+  case 7:
+  case 8:
+  case 9:
+  count = count;
+  break;
+  case 10:
+  case "J":
+  case "Q":
+  case "K":
+  case "A":
+  count--;
+  break;
+
+  
+}
+if (count > 0){
+  return count + " Bet";
+}
+else{
+return count + " Hold";
+} 
+  // Only change code above this line
+}
+
+cc(2); cc(3); cc(7); cc('K'); cc('A'); */
 //-------------------------------------------------------------------------------------
 /*Make an object that represents a dog called myDog which contains the properties name (a string), legs, tails and friends.
 
@@ -831,6 +869,27 @@ const myDog = {
 myDog["name"] = "Happy Coder";
 */
 //-------------------------------------------------------------------------------------
+//Add a bark property to myDog and set it to a dog sound, such as "woof". You may use either dot or bracket notation
+/*const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+myDog["bark"] = "woof"; */
 //-------------------------------------------------------------------------------------
+//Delete the tails property from myDog. You may use either dot or bracket notation.
+/*// Setup
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+// Only change code below this line
+delete myDog.tails */
 //-------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------
