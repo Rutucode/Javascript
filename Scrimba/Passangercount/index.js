@@ -37,10 +37,11 @@ function increment() {
     countEl.innerText = count // IMP
 }
 //used getElementById and inside function "countEl" made equal to count
-
+//___________________
 
 // 1. Create a function, save(), which logs out the count when it's called
 
 function save() {
     console.log(count)
 }
+//
