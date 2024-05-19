@@ -26,6 +26,7 @@ function   increment() {
 
  //NEXT STEP
  // camelCase
+ /*
 let countEl = document.getElementById("count-el")  // pass in arguments
 
 console.log(countEl)
@@ -43,5 +44,31 @@ function increment() {
 
 function save() {
     console.log(count)
+}*/
+//----------------------------NEW-------------------------------------------------
+
+// 1. Grab the save-el paragrah and store it in a variable called saveEl
+let saveEl = document.getElementById("save-el")
+let countEl = document.getElementById("count-el")
+let count = 0
+
+function increment() {
+    count += 1
+    countEl.innerText = count
 }
-//
+console.log(saveEl)
+function save() {
+    // 2. Create a variable that contains both the count and the dash separator, i.e. "12 - "
+    // 3. Render the variable in the saveEl using innerText
+    // NB: Make sure to not delete the existing content of the paragraph
+  let  saveNum = count + "-" + "" ;
+     //  saveEl.innerText = "Previous entires:" + " " + saveNum;
+      saveEl.innerText += saveNum;
+    console.log(count)
+    countEl.textContent = 0 //to restat from zero
+    count = 0
+    
+}
+save()
+
+
