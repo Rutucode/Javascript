@@ -142,3 +142,59 @@ let name = "Per Harald Borgen"
 let greeting = "Welcome back "
 welcomeEl.innerText = greeting + " " + name
 */
+//New ---------------------------------------------------------------------------------------
+// Create two variables, firstName and lastName
+
+// Concatenate the two variables into a third variable called fullName
+
+// Log fullName to the console
+
+let firstName = "Rutuja ";
+let lastName = "Pawar";
+let fullName = firstName + lastName;
+console.log(fullName)
+
+//New ---------------------------------------------------------------------------------------
+//let name = "Linda"
+//let greeting = "Hi there"
+
+// Create a function that logs out "Hi there, Linda!" when called
+function welcome(){
+   let message = greeting + ", " + name + "!";
+    console.log(message)
+}
+welcome()
+//_________Sol2_____
+function greetLinda() {
+  console.log(greeting + ", " + name + "!")
+}
+
+greetLinda()
+//New ---------------------------------------------------------------------------------------
+let myPoints = 3
+
+// Create two functions, add3Points() and remove1Point(), and have them
+// add/remove points to/from the myPoints variable
+function add3Points(){
+    myPoints += 3;
+    
+}
+add3Points()
+add3Points()
+add3Points()
+function remove1Point(){
+    myPoints -= 1;
+}
+remove1Point()
+remove1Point()
+
+// Call the functions to that the line below logs out 10
+console.log(myPoints)
+//New ---------------------------------------------------------------------------------------
+// Try to predict what each of the lines will log out
+console.log("2" + 2) // "22"
+console.log(11 + 7) // 18
+console.log(6 + "5") // "65"
+console.log("My points: " + 5 + 9) // "My Points: 59 "
+console.log(2 + 2) // 4
+console.log("11" + "14") // "1144"
