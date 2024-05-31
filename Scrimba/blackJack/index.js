@@ -1,3 +1,13 @@
+// 1. Create two variables, firstCard and secondCard. 
+// Set their values to a random number between 2-11
+
+// 2. Create a variable, sum, and set it to the sum of the two cards
+// let firstCard = 2;
+// let secondCard = 9;
+
+// let sum = firstCard + secondCard;
+// console.log(sum)
+//PRCTICE CODE--------------------------------------------------------------------
 /*
 // Check if the person is old enough to enter the nightclub (21)
 // Log a suitable message to the console in both cases
@@ -34,22 +44,42 @@ else{
     console.log("Not elegible, you have already gotten one")
 } */
 //--------------------------------------------------------------------
+
 let firstCard = 10
-let secondCard = 11
+let secondCard = 4
 let sum = firstCard + secondCard
 let hasBlackJack = false
-// 1. Create a variable called isAlive and assign it to true
 let isAlive = true
-// 2. Flip its value to false in the appropriate code block 
-if (sum <= 20) {
-    console.log("Do you want to draw a new card? 🙂")
-} else if (sum === 21) {
-    console.log("Wohoo! You've got Blackjack! 🥳")
-    hasBlackJack = true
-} else {
-    console.log("You're out of the game! 😭")
-    isAlive = false
+let message = ""
+
+// 1. Store the message-el paragraph in a variable called messageEl
+let messageEl = document.getElementById("message-el")
+let sumEl = document.getElementById("sum-el")
+let cardsEl = document.getElementById("cards-el")
+
+//let sumEl = document.querySelector("#sum-el")
+function startGame() {
+    cardsEl.textContent = ("Cards:" + firstCard + " " + secondCard);
+    sumEl.textContent =  ("Sum:" + sum);
+    if (sum <= 20) {
+        message = "Do you want to draw a new card? 🙂"
+    } else if (sum === 21) {
+        message = "Wohoo! You've got Blackjack! 🥳"
+        hasBlackJack = true
+    } else {
+        message = "You're out of the game! 😭"
+        isAlive = false
+    }
+    // 2. Display the message in the messageEl using messageEl.textContent
+   
+    messageEl.textContent  = (message)
 }
 
-// 3. Log it out to check that you're doing it right
-console.log(isAlive)
+function newCard(){
+    console.log("Drawing a new card from the deck!")
+
+    let card = 7;
+    sum += card;
+
+    startGame()
+}
