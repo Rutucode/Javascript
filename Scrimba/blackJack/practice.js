@@ -195,3 +195,43 @@ if (dayOfMonth === 31 && weekday === "Friday"){
 }
 
 //---------------------------------------------------------------------------
+let hands = ["rock", "paper", "scissor"]
+
+// Create a function that returns a random item from the array
+function option(){
+   // hands.length
+    let hand = Math.floor(Math.random() * 3  )
+    return hands[hand]
+}
+
+
+console.log(option())
+
+// let hands = ["rock", "paper", "scissor"]
+
+// // Create a function that returns a random item from the array
+
+// function getHand() {
+//     let randomIndex = Math.floor( Math.random() * 3)
+//     return hands[randomIndex]
+// }
+
+// console.log( getHand() )
+//---------------------------------------------------------------------------
+let fighters = ["🐉", "🐥", "🐊","💩", "🦍", "🐢", "🐩", "🦭", "🦀", "🐝", "🤖", "🐘", "🐸", "🕷","🐆", "🦕", "🦁"]
+
+let stageEl = document.getElementById("stage")
+let fightButton = document.getElementById("fightButton")
+
+fightButton.addEventListener("click", function() {
+    // Challenge:
+    // When the user clicks on the "Pick Fighters" button, pick two random 
+    
+     let fight1 = Math.floor(Math.random() * 16)
+    let fight2 = Math.floor(Math.random() * 16)
+    stageEl.textContent = fighters[fight1] + " VS " + fighters[fight2]
+   // stageEl.textContent = fighters[Math.floor(Math.random() * 16)] + " VS " + fighters[Math.floor(Math.random() * 16)]
+    // emoji fighters and display them as i.e. "🦀 vs 🐢" in the "stage" <div>.
+     
+})
+
