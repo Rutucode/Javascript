@@ -230,8 +230,19 @@ fightButton.addEventListener("click", function() {
      let fight1 = Math.floor(Math.random() * 16)
     let fight2 = Math.floor(Math.random() * 16)
     stageEl.textContent = fighters[fight1] + " VS " + fighters[fight2]
+    //--------------------PART 2-------------------------
    // stageEl.textContent = fighters[Math.floor(Math.random() * 16)] + " VS " + fighters[Math.floor(Math.random() * 16)]
     // emoji fighters and display them as i.e. "🦀 vs 🐢" in the "stage" <div>.
      
 })
 
+//--------------SOL 2----------------
+
+fightButton.addEventListener("click", function() {
+    // Challenge:
+    // When the user clicks on the "Pick Fighters" button, pick two random 
+    // emoji fighters and display them as i.e. "🦀 vs 🐢" in the "stage" <div>.
+    let randomIndexOne = Math.floor( Math.random() * fighters.length )
+    let randomIndexTwo = Math.floor( Math.random() * fighters.length )
+    stageEl.textContent = fighters[randomIndexOne] + " vs " + fighters[randomIndexTwo]
+})
