@@ -5,8 +5,18 @@ const characters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
 let generateBtn = document.getElementById("generate")
 let randomPass1 = document.getElementById("password1")
 let randomPass2 = document.getElementById("password2")
-
+let selectValue = document.getElementById("select")
 let charLength  = 15
+
+//  let getEl = document.getElementById("select")
+
+  function getOption(){
+//       getEl.textContent = value=""
+charLength = document.getElementById("select").value
+ 
+   }
+
+
 
 function randonchar(){
     let randomPass = Math.floor(Math.random() * characters.length) 
@@ -17,6 +27,7 @@ function randonchar(){
 
  function generatedPassword() {
      let randomPass = ""
+
  for (let i = 0; i < charLength; i++){
      randomPass += randonchar()
 }
@@ -38,4 +49,6 @@ randomPass2.textContent = (passwordTwo)
 
 
 
-//generateBtn.addEventListener("click", function() {})
+// selectValue.addEventlistner("click", function(){
+//     console.log("working")
+// })
