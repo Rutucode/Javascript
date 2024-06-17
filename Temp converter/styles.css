@@ -1,0 +1,90 @@
+:root{
+    --font-col: #10B981;
+    --font-fam: 'Inter', sans-serif;
+    --bg: #303030;
+    --cover-bg: #ECFDF5;
+    --main-font: #111827;
+    --btn: #273549;
+}
+
+*{
+    font-family: var(--font-fam)
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--btn);
+}
+.container{
+    display: flex;
+  height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 923px;
+    height: 470px; 
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cover-bg);
+    margin: auto;
+    border-radius: 15px;
+  
+}
+
+.main{
+display: flex;
+}
+.heading{
+    text-align: center;
+}
+h1{
+    color: var(--font-col);
+}
+
+.btn{
+    display: flex;
+    width: 205px;
+    height: 71px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    border-radius: 10px;
+    background-color: var(--btn);
+    color: var(--font-col);
+    font-size: 32px;
+    font-weight: 600;
+    margin: 60px auto;
+    border: none;
+
+}
+
+.box{
+    display: flex;
+    width: 335px;
+    height: 65px;
+    border: 2px solid var(--font-col);
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+  color: #10B981;
+    background-color: var(--cover-bg);
+    
+}
+#temp1, output{
+ color: #10B981;
+}
+
+div{
+    justify-content: center;
+    align-items: center;    
+}
+
+.con{
+    padding-left: 60px;
+    
+   
+}

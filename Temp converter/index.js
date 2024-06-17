@@ -1,3 +1,5 @@
+//Fahrenheit To Celsius Converter
+
 let inputs = ""
 const inputEl = document.getElementById("temp1")
 const inputBtn = document.getElementById("input-btn")
@@ -29,6 +31,6 @@ document.getElementById("input-btn").addEventListener("click", function(){
 function inputContent(){ 
     let degree = ""
    let celtemp = fahrenheitToCelsius(inputEl.value)  
-     degree += "<p>" + " celius = "+celtemp+ " farenhite</p>"
+     degree += "<div>" +celtemp+ " °C</div>"
 outputEl.innerHTML = degree
 } 
