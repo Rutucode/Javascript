@@ -44,10 +44,6 @@ body {
 }
 
 input {
-  /*
-    color: #432000;
-    background-color: #DCE1EB
-    */
   color: #432000;
   background-color: #dce1eb;
   width: 200px;
@@ -61,14 +57,11 @@ input {
 }
 
 button {
-  /*
-    color: #FDFDFD;
-    background-color: #AC485A;
-    */
   color: #fdfdfd;
   background-color: var(--btn-col);
-  border: none;
-  padding: 1em 5em;
+  border: 0;
+  width: 240px;
+  padding: 1em;
   border-radius: 8px;
   text-align: center;
   margin: 5px;

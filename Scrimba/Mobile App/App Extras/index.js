@@ -1,5 +1,8 @@
+import { add } from "./function"
+
+console.log(add(2,8))
 const appSettings = {
-    databaseURL: https://playground-987e5-default-rtdb.asia-southeast1.firebasedatabase.app/
+    databaseURL: "https://playground-987e5-default-rtdb.asia-southeast1.firebasedatabase.app/"
 }
 
 const inputFieldEl = document.getElementById("input-field")
