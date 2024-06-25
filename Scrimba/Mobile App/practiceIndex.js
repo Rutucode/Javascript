@@ -56,30 +56,35 @@ function(snapshot) {} as the second argument
 */
 onValue(shoppingListInDB, function (snapshot) {
   //console.log(snapshot.val())
+ // Challenge: Change the onValue code so that it uses snapshot.exists() to show items when there are items in the database and if there are not displays the text 'No items here... yet'.
 
-  // Challenge: Use Object.values() to convert snapshot.val() from an Object to an Array. Create a variable for this.
+  if (snapshot.exists()){
+      // Challenge: Use Object.values() to convert snapshot.val() from an Object to an Array. Create a variable for this.
 
 
-  let snapshotValuArr = Object.entries(snapshot.val());
-
-  clearShoppingListEl();
-
-  //console.log(snapshotValuArr)
-
-  // Challenge: Write a for loop to iterate on itemsArray and console log each item
-  for (let i = 0; i < snapshotValuArr.length; i++) {
-   
-    // Challenge: Use the appendItemToShoppingListEl(itemValue) function inside of the for loop to append item to the shopping list element for each iteration.
-    let itemArry = snapshotValuArr[i];
-     // Challenge: Make two let variables:
-        // currentItemID and currentItemValue and use currentItem to set both of
-    // them equal to the correct values.
-    
-    let currentItemID = itemArry[0]
-    let currentItemValue = itemArry[1]
-    addToList(itemArry);
-    //console.log(snapshotValuArr[i]);
-  }
+    let snapshotValuArr = Object.entries(snapshot.val());
+  
+    clearShoppingListEl();
+  
+    //console.log(snapshotValuArr)
+  
+    // Challenge: Write a for loop to iterate on itemsArray and console log each item
+    for (let i = 0; i < snapshotValuArr.length; i++) {
+     
+      // Challenge: Use the appendItemToShoppingListEl(itemValue) function inside of the for loop to append item to the shopping list element for each iteration.
+      let itemArry = snapshotValuArr[i];
+       // Challenge: Make two let variables:
+          // currentItemID and currentItemValue and use currentItem to set both of
+      // them equal to the correct values.
+      
+      let currentItemID = itemArry[0]
+      let currentItemValue = itemArry[1]
+      addToList(itemArry);
+      //console.log(snapshotValuArr[i]);
+    }
+   } else {
+    shoppingListEl.innerHTML =  'No items here... yet'
+    }
 });
 
 function clearShoppingListEl() {

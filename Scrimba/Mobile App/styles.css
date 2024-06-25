@@ -6,7 +6,7 @@
 }
 
 :root {
-  --btn-col: #ac485a;
+  --btn-col: #f26680;
   --font: "Rubik", sans-serif;
   --input-bg-col: #dce1eb;
 }
@@ -20,7 +20,9 @@ body {
     background-color: #EEF0F4;
     */
   font-family: var(--font);
-  background-color: #eef0f4;
+  background-color: #ffffff;
+  color: #f29bbb;
+  user-select: none;
 }
 * {
   font-family: var(--font);
@@ -69,23 +71,33 @@ button {
   font-size: 20px;
 }
 
+button:hover {
+  background-color: #fdc58c;
+  cursor: pointer;
+}
 
 ul {
-  list-style: none;   
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   padding: 0;
- }
- 
- ul li {
-     font-size: 20px;
-     background-color: #FFFDF8;
-     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
-     padding: 15px;
-     border-radius: 8px;
-      justify-content: center;
-     align-items: center;
-     flex-grow: 1;
-     text-align: center;
- }
+}
+
+ul li {
+  font-size: 20px;
+  background-color: #fefffb;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+ul li:hover {
+  background-color: #f29bbb;
+  cursor: pointer;
+  color: #ffffff;
+}
