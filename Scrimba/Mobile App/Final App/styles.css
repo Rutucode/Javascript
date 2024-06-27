@@ -6,7 +6,7 @@
 }
 
 :root {
-  --btn-col: #f26680;
+  --btn-col: #d93654;
   --font: "Rubik", sans-serif;
   --input-bg-col: #dce1eb;
 }
@@ -21,7 +21,7 @@ body {
     */
   font-family: var(--font);
   background-color: #ffffff;
-  color: #f29bbb;
+  color: #bd5568;
   user-select: none;
 }
 * {
@@ -29,7 +29,7 @@ body {
 }
 
 .container {
-  border: 5px solid black;
+  border: 5px solid #6d1a29;
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -72,8 +72,12 @@ button {
 }
 
 button:hover {
-  background-color: #fdc58c;
+  background-color: #a62a40;
   cursor: pointer;
+}
+
+.list-items {
+  margin: 0 15px;
 }
 
 ul {
@@ -97,7 +101,7 @@ ul li {
 }
 
 ul li:hover {
-  background-color: #f29bbb;
+  background-color: #f26680;
   cursor: pointer;
   color: #ffffff;
 }
