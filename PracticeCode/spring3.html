@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ticket Details</title>
+    <style>
+      div#maincontent {
+        height: 150px;
+        width: 500px;
+        border: 1px solid #cee2fa;
+        text-align: left;
+        color: #08438e;
+        font-family: calibri;
+        font-size: 20;
+        padding: 5px;
+      }
+      div#heading {
+        text-decoration: bold;
+        text-align: center;
+        margin-top: 80px;
+        width: 500px;
+        border: 1px solid #cee2fa;
+        text-align: center;
+        color: #08438e;
+        background-color: #cee2fa;
+        font-family: "calibri", sans-serif;
+        font-size: 20;
+        padding: 5px;
+      }
+      h4 {
+        padding: 0;
+        margin: 0;
+      }
+      .lists {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!--29/06/24-->>
+    <!--Write JavaScript code to do online booking of theatre tickets and calculate the total price, considering the price per ticket as $9. Also, apply a festive season discount of 10% and calculate the discounted amount.  -->
+    <div>
+      <div id="heading">
+        <b>Theatre Drama</b>
+      </div>
+      <div id="maincontent">
+        <h4>Your Ticket Details:</h4>
+        <br />
+        <ul class="lists">
+          <li id="seats">Total number of seats booked:</li>
+          <li id="totalCost"></li>
+          <li id="discount"></li>
+          <li id="discount-cost"></li>
+        </ul>
+
+        <br />
+        <script>
+          //Write the code to calculate the total price and discounted price for the tickets
+          let seats = 3;
+          let totalSeats = document.getElementById("seats");
+          totalSeats.innerHTML = `Total number of seats booked: ${seats}`;
+
+          let ticketCost = 9;
+          let threeTicketCost = 9 * 3;
+          let totalTicketsCost = document.getElementById("totalCost");
+          totalTicketsCost.innerHTML = `Total cost of three tickets: $ ${threeTicketCost}`;
+
+          let discount = 10;
+          let discountPercent = document.getElementById("discount");
+          discountPercent.innerHTML = `Festive season discount is : ${discount} %`;
+          let discountedPrice = 27 - 27 * 0.1;
+          let discountCost = document.getElementById("discount-cost");
+          discountCost.textContent = `Total cost after dicount is : $ ${discountedPrice} `;
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
