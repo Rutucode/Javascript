@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Details</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      div#maincontent {
+        height: 200px;
+        width: 600px;
+        border: 1px solid #cee2fa;
+        text-align: left;
+        color: #08438e;
+        font-family: calibri;
+        font-size: 20;
+        padding: 5px;
+      }
+      div#heading {
+        text-decoration: bold;
+        text-align: center;
+        margin-top: 80px;
+        width: 600px;
+        border: 1px solid #cee2fa;
+        text-align: center;
+        color: #08438e;
+        background-color: #cee2fa;
+        font-family: calibri;
+        font-size: 20;
+        padding: 5px;
+      }
+      h4 {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="heading">
+        <b>Theatre Drama</b>
+      </div>
+      <div id="maincontent">
+        <h4>Your Ticket Details:</h4>
+        <br />
+        <h4>
+          Ticket for Customer 1 gets 5% discunt!, cost is : $8.5499999999999999
+        </h4>
+        <h4>Ticket for Customer 2 gets 7% discunt!, cost is : $8.37</h4>
+        <h4>Ticket for Customer 3 gets 9% discunt!, cost is : $8.19</h4>
+        <h4>Ticket for Customer 4 gets 11% discunt!, cost is : $8.01</h4>
+        <h4 id="total-Cost"></h4>
+        <script>
+          // Write the code to display the total price and discounted price of tickets
+
+          let totalCost = document.getElementById("total-Cost");
+          const ticketPrice = 9;
+          let customerNumber = 0;
+          let numberOfTickets = 4;
+          let toatlTicketprice = ticketPrice * numberOfTickets;
+          
+          function costAfterDiscount() {
+            if (numberOfTickets === 2 && numberOfTickets < 5) {
+              discount = 5;
+            } else if (numberOfTickets === 3) {
+              discount = 7;
+            } else if (numberOfTickets === 4) {
+              discount = 11;
+            } else {
+              ("booking not allowed");
+            }
+            let discountedPrice = ticketPrice - (ticketPrice * discount) / 100;
+          }
+          totalCost.textContent = `For ${numberOfTickets} tickets, you need to pay : $ ${toatlTicketprice}% instad of ${discountedPrice}`;
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
