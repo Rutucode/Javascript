@@ -2,12 +2,12 @@ let homeScoreBtnOne = document.getElementById("home-score-btn-1")
 let homeScoreBtntwo = document.getElementById("home-score-btn-2")
 let homeScoreBtnthree = document.getElementById("home-score-btn-3")
 
-let homeStoreEl =document.getElementById("home-score")
+let homeScoreEl =document.getElementById("home-score")
 let homeScore = 0
 
 function increaseHomeScoreOne(){
     homeScore += 1
-    homeStoreEl.textContent = homeScore
+    homeScoreEl.textContent = homeScore
 }
 //----------------------------------------------------------------------
 function increaseHomeScoretwo(){
@@ -17,7 +17,7 @@ function increaseHomeScoretwo(){
 //------------------------------------------------------------------------
 function increaseHomeScorethree(){
     homeScore += 3;
-    homeStoreEl.textContent = homeScore
+    homeScoreEl.textContent = homeScore
 }
 //----------------PART 2 ----------------------------------------------
 
