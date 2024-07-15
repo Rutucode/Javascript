@@ -15,7 +15,7 @@ function randonchar(){
 
 //console.log(randonchar())
 
- function generatedPassword() {
+ function generatedPasswordlength() {
      let randomPass = ""
  for (let i = 0; i < charLength; i++){
      randomPass += randonchar()
@@ -25,13 +25,13 @@ function randonchar(){
 
  function setPass(){
    // let randomPass1 = document.getElementById("password1")
-    randomPass1.textContent = generatedPassword()
-    randomPass2.textContent = generatedPassword()
+    randomPass1.textContent = generatedPasswordlength()
+    randomPass2.textContent = generatedPasswordlength()
  }
 
 
- const passwordOne = generatedPassword()
- const passwordTwo = generatedPassword()
+ const passwordOne = generatedPasswordlength()
+ const passwordTwo = generatedPasswordlength()
 // console.log(generatedPassword())
 randomPass1.textContent = (passwordOne)
 randomPass2.textContent = (passwordTwo)
