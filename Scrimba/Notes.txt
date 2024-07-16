@@ -1,0 +1,195 @@
+```jsx
+
+// onclick="saveLead()" | Button clicked from onclick attribute
+function saveLead() {
+    console.log("Button clicked from onclick attribute")
+}
+//--------------------------------------------------------
+// Button clicked from addEventListener
+let inputBtn = document.getElementById("input-btn")
+
+inputBtn.addEventListener("click", function() {
+    console.log("Button clicked from addEventListener")
+})
+
+```
+
+const
+
+```jsx
+let myLeads = []
+const inputEl = document.getElementById("input-el")
+const inputBtn = document.getElementById("input-btn")
+
+inputBtn.addEventListener("click", function() {
+    // Push the value from the inputEl into the myLeads array 
+    // instead of the hard-coded "www.awesomeleads.com" value
+    // Google -> "get value from input field javascript"
+    myLeads.push(inputEl.value)
+    //  myLeads.push(document.getElementById("input-el").value)
+    console.log(myLeads)
+})
+
+```
+
+To render leads on-screen use for loop
+
+```jsx
+for (let i = 0; i < myLeads.length; i++) {
+    ulEl.textContent += myLeads[i] + " "
+}
+```
+
+```jsx
+// for bullet point in javascript
+for (let i = 0; i < myLeads.length; i++) {
+    ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+}
+```
+
+Different method other than innerHTML-
+
+  
+
+```jsx
+// Let's try a different method!
+for (let i = 0; i < myLeads.length; i++) {
+    // ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+    // create element
+    // set text content
+    // append to ul
+    const li = document.createElement("li")
+    li.textContent = myLeads[i]
+    ulEl.append(li)
+}
+
+```
+
+```jsx
+//REMEMBER : DOM manipulation comes with the cost
+// 1. Create a variable, listItems, to hold all the HTML for the list items
+// Assign it to an empty string to begin with
+let listItems = ""
+for (let i = 0; i < myLeads.length; i++) {
+    // 2. Add the item to the listItems variable instead of the ulEl.innerHTML
+    listItems += "<li>" + myLeads[i] + "</li>"
+    console.log(listItems)
+}
+// 3. Render the listItems inside the unordered list using ulEl.innerHTML
+ulEl.innerHTML = listItems
+
+//--------------------------------------------Here is another way
+//as the function is continuously rebuilding, lets find another way
+/*In the above fun. entire list is rerendering again instead of adding new
+We can add a new one */
+
+inputBtn.addEventListener("click", function() {
+    myLeads.push(inputEl.value)
+    renderLead()
+    inputEl.value = ""
+})
+
+function renderLead() {
+    let listItem = "<li>" + inputEl.value + "</li>"
+    ulEl.innerHTML += listItem
+}
+//Works when we don't want to retrive item
+//--------------------------------------------Here is another way
+
+inputBtn.addEventListener("click", function() {
+    myLeads.push(inputEl.value)
+    ulEl.innerHTML += "<li>" + inputEl.value + "</li>"
+    inputEl.value = ""
+})
+
+```
+
+```jsx
+inputBtn.addEventListener("click", function() {
+    myLeads.push(inputEl.value)
+    // Clear out the input field
+    inputEl.value = ''
+    renderLeads()
+})
+
+```
+
+**Template strings**
+
+```jsx
+    Check highlighted code
+    // we can convert the strings into numbers using the Number() function
+    const numOneVal = Number(numOneInput.value);
+    const numTwoVal = Number(numTwoInput.value);
+    
+    console.log(`numOneVal is of type: ${typeof numOneVal}, with a value of ${numOneVal}`);
+    console.log(`numTwoVal is of type: ${typeof numTwoVal}, with a value of ${numTwoVal}`);
+    // now the numbers add up correctly
+    resultText.innerText = `${numOneVal} + ${numTwoVal} = ${numOneVal + numTwoVal}`;
+})
+```
+
+JSON
+
+```jsx
+localstorage.clear()
+localstorage.setItem()
+localstorage.getItem()
+
+// 1. Save a key-value pair in localStorage
+// 2. Refresh the page. Get the value and log it to the console
+// 3. Clear localStorage
+
+// HINTS:
+// localStorage.setItem(key, value)
+// localStorage.getItem(key)
+// localStorage.clear()
+// PS: both key and value need to be strings
+
+localStorage.setItem("myLeads", "www.formleads.com")
+localStorage.getItem("myLeads")
+console.log(localStorage.getItem("myLeads"))
+localStorage.clear()
+```
+
+[How to Use LocalStorage in JavaScript](https://www.freecodecamp.org/news/use-local-storage-in-modern-applications/)
+
+```jsx
+localStorage only supports strings. Use JSON.stringify() and JSON.parse().
+
+var names = [];
+names[0] = prompt("New member name?");
+localStorage.setItem("names", JSON.stringify(names)); // turns into string
+
+//...
+var storedNames = JSON.parse(localStorage.getItem("names"));
+```
+
+```jsx
+//myLeads.push is not a function only works on arrays
+
+let myLeads = `["www.awesomelead.com"]`
+
+myLeads.push("www.epiclead.com")
+
+----------------------------------
+myLeads = JSON.stringify(myLeads)
+
+console.log(typeof myLeads)
+
+type of tell what it is | currently string
+```
+
+null = falsy value | signalize emptiness
+
+```jsx
+// truthy
+// falsy
+
+// false
+// 0
+// ""
+// null- primitive dev signals emptiness
+// undefined - primitive  -dev signals emptiness
+// NaN -never used
+```
